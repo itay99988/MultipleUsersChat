@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            Itay's Chat App
+        </title>
+        <link rel="stylesheet" href="chat.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@1.0.28/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.0/socket.io.js"></script>
+    </head>
+    <body>
+        <div id="chat">
+            <h1>Multiple Users Chat</h1>
+            <div id="messages">
+                <p class="message" v-for="m in messages" track-by="$index">{{m}}</p>
+            </div>
+            <hr>
+            <div id="inputs">
+                <input type="text" id="mynickname" v-model="mynickname" placeholder="nickname">
+                <br>
+                <input type="text" id="mymessage" v-model="mymessage" placeholder="Type your message and hit enter" v-on:keyup.enter="sendMessage" autofocus>
+                <br>
+                <button id="send" v-on:click="sendMessage">Send!</button>
+            </div>
+            <h5>Number of connected users: {{onlineusers}} </h5>
+        </div>
+        <script src="chatclient.js"></script>
+    </body>
+</html>

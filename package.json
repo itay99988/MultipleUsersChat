@@ -1,0 +1,16 @@
+{
+  "name": "chat_app",
+  "version": "1.0.0",
+  "description": "A simple chat server which is capable of receiving and sending message from multiple users using sockets.",
+  "main": "chatapp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Itay Cohen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket-io": "^1.0.0",
+    "socket.io": "^2.1.0"
+  }
+}
